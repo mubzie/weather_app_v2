@@ -1,13 +1,6 @@
 import { fetchWeatherData, getWeatherinfo } from "./modules/fetchData"
+import { createUI } from "./modules/DOM"
 
-const dataInfo = async () =>{
-    
-   const data = await fetchWeatherData('london')
 
-   const weatherInfo = getWeatherinfo(data)
-
-    console.log(weatherInfo)
-}
-
-dataInfo()
+createUI()
 
