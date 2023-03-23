@@ -9,6 +9,7 @@ const fetchWeatherData = async (city) => {
 
     } catch (error) {
 
+        // const dataError = document.querySelector('.header').textContent = 'can not'
         console.log("failed to fetch data")
         
     }

@@ -123,10 +123,23 @@ section {
     font-size: var(--spacing-small);
 }
 
+.c-wrapper {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: fit-content;
+}
+
 .condition {
     font-size: var(--font-size-small);
     line-height: 1.8;
     margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+#icon {
+    width: 64px;
+    height: 64px;
 }
 
 .region {
@@ -159,7 +172,7 @@ section {
 
 .divider {
     width: 2px;
-    height: 311px;
+    height: 330px;
     background-color: #000;
 }
 
@@ -212,6 +225,10 @@ section {
     padding: 16px 8px 12px;
 
     text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .icon_ {
@@ -222,16 +239,20 @@ section {
 }
 
 .cond_ {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-small);
     font-weight: 900;
 
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .temp_ {
-    font-size: var(--font-size-xsmall);
+    font-size: var(--font-size-xxsmall);
 }
 
+.one, .two, .three {
+    width: 64px;
+    height: 64px;
+}
 
 
 /* media queries declaration */
