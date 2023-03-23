@@ -9,14 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <header>Weather App</header>
+    <header class="header">Weather App</header>
 
     <main>
         <div class="search">
 
             <form id="search_input">
                 <label for="search"></label>
-                <input type="text" name="" id="serach" required>
+                <input type="text" name="" id="search" required>
 
                 <button type="submit">search</button>
             </form>
@@ -30,16 +30,19 @@
                 <div class="date">22-03-2023</div>
     
                 <div class="loc_container">
-                    <div class="condition">Cloudy</div>
+                    <div class="c-wrapper">
+                        <div class="condition">Cloudy</div>
+                        <div id="icon"></div>
+                    </div>
                     <div class="region">Lagos, Nigeria</div>
                 </div>
     
                 <div class="temp_info">
                     <div class="temp">28.3C</div>
                     <div class="extra_info">
-                        <div class="info">humidity: 23</div>
-                        <div class="info">feelslike: 12</div>
-                        <div class="info">windSpeed: 23</div> 
+                        <div class="info humidity">humidity: 23</div>
+                        <div class="info feelslike">feelslike: 12</div>
+                        <div class="info windspeed">windSpeed: 23</div> 
                     </div>
                 </div>
 
@@ -51,7 +54,7 @@
     
                 <div class="header_forecast">
                     <div class="header_forecast_child">
-                        Weather forecast for the next 3 days in lagos
+                        Weather forecast for the next 3 days in lag
                     </div> 
                 </div>
 
@@ -59,33 +62,33 @@
 
                     <div class="days">
                         <div class="f-wrapper">
-                            <div class="heading">monday</div>
+                            <div class="heading h_one">monday</div>
                             <div class="f_data">
-                                <div class="icon_">23-03-2023</div>
-                                <div class="cond_">rainy</div>
-                                <div class="temp_">23.3c</div>
+                                <div class="icon_ i_one"></div>
+                                <div class="cond_ c_one">rainy</div>
+                                <div class="temp_ t_one">23.3c</div>
                             </div>
                         </div>
                     </div>
                     
                     <div class="days">
                         <div class="f-wrapper">
-                            <div class="heading">monday</div>
+                            <div class="heading h_two">monday</div>
                             <div class="f_data">
-                                <div class="icon_">23-03-2023</div>
-                                <div class="cond_">rainy</div>
-                                <div class="temp_">23.3c</div>
+                                <div class="icon_ i_two"></div>
+                                <div class="cond_ c_two">rainy</div>
+                                <div class="temp_ t_two">23.3c</div>
                             </div>
                         </div>
                     </div>
     
                     <div class="days">
                         <div class="f-wrapper">
-                            <div class="heading">monday</div>
+                            <div class="heading h_three">monday</div>
                             <div class="f_data">
-                                <div class="icon_">23-03-2023</div>
-                                <div class="cond_">rainy</div>
-                                <div class="temp_">23.3c</div>
+                                <div class="icon_ i_three"></div>
+                                <div class="cond_ c_three">rainy</div>
+                                <div class="temp_ t_three">23.3c</div>
                             </div>
                         </div>
                     </div>
