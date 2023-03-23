@@ -160,39 +160,48 @@ section {
 .divider {
     width: 2px;
     height: 311px;
-    /* display: inline-block; */
     background-color: #000;
 }
 
 .header_forecast {
-    display: inline-block;
-    margin-bottom: var(--spacing-large);
+    text-align: center;
+    margin-bottom: var(--spacing-xsmall);
     padding: 4px 12px;
 
     font-size: var(--font-size-small);
     font-weight: 700;
+    line-height: 1.8;
 
     background-color: #EEEEEE;
     border-radius: 4px;
 }
 
+.header_forecast_child {
+    display: inline-block;
+}
+
 .f_days {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 32px;
+    gap: 20px;
+}
 
-    width: 100%;
+.days {
+    /* width: 170px; */
 }
 
 .heading {
     font-size: 16px;
+    font-weight: 600;
+
     padding-top: 8px;
     padding-bottom: 8px;
     text-align: center;
 
     margin-bottom: 16px;
 
-    background-color: #EEEEEE;
+    background-color: #199199;
+    color: #ffffff;
     border-radius: 4px;
 }
 
@@ -200,7 +209,7 @@ section {
     border: 2px solid #EEEEEE;
     border-radius: 4px;
 
-    padding: 16px 32px 12px;
+    padding: 16px 8px 12px;
 
     text-align: center;
 }
@@ -221,4 +230,112 @@ section {
 
 .temp_ {
     font-size: var(--font-size-xsmall);
+}
+
+
+
+/* media queries declaration */
+
+@media (max-width: 900px) {
+
+    main {
+        margin-bottom: 40px;
+    }
+    
+    section {
+        flex-direction: column;
+    }
+
+    .weather_info {
+        margin-bottom: 56px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .header_forecast {
+        margin-bottom: var(--spacing-medium);
+    }
+
+    .temp_info {
+        justify-content: space-between;
+    }
+
+    .f_days {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    main {
+        padding: 0 40px;
+    }
+    
+}
+
+@media (max-width: 700px) {
+
+    main {
+        padding: 0 32px;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .temp_info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    input[type="text"] {
+        width: 400px;
+        height: 60px;
+        padding: 12px;
+    }
+
+    button[type="submit"] {
+        width: 96px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    
+}
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 0 20px;
+    }
+
+    input[type="text"] {
+        width: 350px;
+        height: 56px;
+        padding: 12px;
+    }
+
+    button[type="submit"] {
+        width: 96px;
+        height: 56px;
+        margin-left: 20px;
+    }
+    
+    section {
+        flex-direction: column;
+    }
+
+    .temp_info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .f_days {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    
 }
