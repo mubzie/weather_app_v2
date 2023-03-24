@@ -113,7 +113,7 @@ button[type="submit"] {
     right: 0;
     left: 0;
     z-index: 1;
-    display: none;
+    /* display: none; */
     background-color: #ffffff;
 
     /* display: flex; */
@@ -121,9 +121,19 @@ button[type="submit"] {
     align-items: center;
 }
 
+.state {
+    display: none;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
 section {
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 
 .date {
@@ -282,6 +292,10 @@ section {
     
     section {
         flex-direction: column;
+    }
+
+    .loading_state {
+        top: 100%;
     }
 
     .weather_info {

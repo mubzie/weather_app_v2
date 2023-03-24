@@ -1,15 +1,30 @@
 const fetchWeatherData = async (city) => {
 
+    
+    
     try {
+        
         
         const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${city}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
         const data = await response.json()
-    
+        
+        // const contentView = document.querySelector('.left')
+        
+        // loadingState.style.display = 'none'
+        // loadingState.style.display = 'flex'
+        // contentView.style.display = 'block'
+        
         return data
-
+        
     } catch (error) {
-
-        // const dataError = document.querySelector('.header').textContent = 'can not'
+        // const loadingState = document.querySelector('.loading_state');
+        // loadingState.style.display = 'flex'
+        
+        const loadingState2 = document.querySelector('.state')
+        console.log(loadingState2)
+        
+        loadingState2.style.display = 'block'
+        loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. try again'
         console.log("failed to fetch data")
         
     }
