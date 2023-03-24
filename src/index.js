@@ -1,8 +1,17 @@
 import { fetchWeatherData, getWeatherinfo } from "./modules/fetchData"
 import { createUI } from "./modules/DOM"
 
+const searchInput = document.getElementById('search')
+const searchBtn = document.getElementById('search_btn')
 
-let city = 'ibadan'
+createUI('lagos')
 
-createUI(city)
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    let city = searchInput.value
+    
+    createUI(city)
+})
+
 
