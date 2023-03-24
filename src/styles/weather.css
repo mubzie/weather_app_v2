@@ -60,7 +60,7 @@ main {
 .search {
     display: flex;
     justify-content: center;
-    margin-bottom: 64px;
+    margin-bottom: 72px;
     position: relative;
     z-index: 2;
 }
@@ -72,7 +72,7 @@ main {
 
 input[type="text"] {
     width: 462px;
-    height: 62px;
+    height: 56px;
     padding: 12px;
 
     border: 2px solid var(--primary-color);
@@ -91,7 +91,7 @@ input:focus {
 
 button[type="submit"] {
     width: 140px;
-    height: 62px;
+    height: 56px;
     margin-left: 20px;
 
     border: none;
@@ -107,30 +107,11 @@ button[type="submit"] {
 }
 
 .loading_state {
-    /* position: absolute; */
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
     z-index: 1;
-    /* display: none; */
     background-color: #ffffff;
-/* 
-    display: flex;
-    justify-content: center; */
-    align-items: center;
 
     justify-content: center;
     align-items: center;
-}
-
-.state {
-    /* display: none; */
-    text-align: center;
-    bottom: 0;
-    position: absolute;
-    right: 0;
-    left: 0;
 }
 
 section {
