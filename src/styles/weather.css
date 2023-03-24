@@ -107,7 +107,7 @@ button[type="submit"] {
 }
 
 .loading_state {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     bottom: 0;
     right: 0;
@@ -115,10 +115,13 @@ button[type="submit"] {
     z-index: 1;
     /* display: none; */
     background-color: #ffffff;
+/* 
+    display: flex;
+    justify-content: center; */
+    align-items: center;
 
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .state {
@@ -131,7 +134,6 @@ button[type="submit"] {
 }
 
 section {
-    /* display: flex; */
     justify-content: space-between;
     display: none;
 }
