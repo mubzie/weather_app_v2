@@ -117,12 +117,12 @@ button[type="submit"] {
     background-color: #ffffff;
 
     /* display: flex; */
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .state {
-    display: none;
+    /* display: none; */
     text-align: center;
     bottom: 0;
     position: absolute;

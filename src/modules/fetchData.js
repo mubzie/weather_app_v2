@@ -1,24 +1,24 @@
 const fetchWeatherData = async (city) => {
-
     
+    const loadingState = document.querySelector('.state');
+    const contentView = document.querySelector('.left')
     
     try {
         
+        // const loadingState = document.querySelector('.loading_state');
         
+        loadingState.style.display = 'block'
+
         const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${city}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
         const data = await response.json()
         
-        // const contentView = document.querySelector('.left')
         
-        // loadingState.style.display = 'none'
-        // loadingState.style.display = 'flex'
-        // contentView.style.display = 'block'
+        loadingState.style.display = 'none'
+        contentView.style.display = 'block'
         
         return data
         
     } catch (error) {
-        // const loadingState = document.querySelector('.loading_state');
-        // loadingState.style.display = 'flex'
         
         const loadingState2 = document.querySelector('.state')
         console.log(loadingState2)
