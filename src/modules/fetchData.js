@@ -2,10 +2,9 @@ const fetchWeatherData = async (city) => {
     
     const loadingState = document.querySelector('.state');
     const contentView = document.querySelector('.left')
+    const loadingState2 = document.querySelector('.state')
     
     try {
-        
-        // const loadingState = document.querySelector('.loading_state');
         
         loadingState.style.display = 'block'
 
@@ -14,17 +13,17 @@ const fetchWeatherData = async (city) => {
         
         
         loadingState.style.display = 'none'
-        contentView.style.display = 'block'
+        // contentView.style.display = 'block'
         
         return data
         
     } catch (error) {
         
-        const loadingState2 = document.querySelector('.state')
-        console.log(loadingState2)
+        loadingState.style.display = 'none'
+        contentView.style.display = 'block'
         
-        loadingState2.style.display = 'block'
-        loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. try again'
+        // loadingState2.style.display = 'block'
+        // loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. please try again'
         console.log("failed to fetch data")
         
     }
