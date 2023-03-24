@@ -15,7 +15,7 @@ const createUI = async (city) => {
     // creating the application UI by targeting its respective DOM element //
 
     const date = document.querySelector('.date')
-    date.textContent = format(new Date(`${data.location.time}`), 'do MMM, yyyy - hh:mm aaa')
+    date.textContent = format(new Date(`${data.location.time}`), 'eeee do MMM, yyyy - hh:mm aaa')
 
     const condition = document.querySelector('.condition')
     condition.textContent = `${data.current.condition}`
@@ -29,7 +29,7 @@ const createUI = async (city) => {
     region.textContent = `${data.location.region}, ${data.location.country}`
 
     const temp = document.querySelector('.temp')
-    temp.textContent = `${data.current.temp}°C`
+    temp.textContent = `${Math.round(Math.trunc(data.current.temp))}°C`
 
     const humidity = document.querySelector('.humidity')
     humidity.textContent = `humidity: ${data.current.humidity}%`
