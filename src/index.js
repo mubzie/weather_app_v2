@@ -31,10 +31,10 @@ const clearDOM = () => {
     const temp3 = document.querySelector('.t_three').textContent = ''
 
     const image = document.querySelector('.img')
-    image.parentNode.removeChild(image)
+    if(image) image.parentNode.removeChild(image)
 
     const images = document.querySelectorAll('.imgs')
-    images.forEach(img => {
+    if(images) images.forEach(img => {
         img.parentNode.removeChild(img)
     })
 
@@ -45,7 +45,11 @@ searchBtn.addEventListener('click', (e) => {
 
     clearDOM()
 
+    const contentView = document.querySelector('.left')
+
     let city = searchInput.value
+
+    contentView.style.display = 'none'
     
     createUI(city)
 
