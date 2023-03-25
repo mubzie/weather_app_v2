@@ -3,8 +3,6 @@ import format from "date-fns/format";
 
 
 const createUI = async (city) => {
-
-    const search = document.getElementById('search')
     
     // fetched the weather data from weatherapi and stored the response in a variable
     const weatherInfo = await fetchWeatherData(city)
