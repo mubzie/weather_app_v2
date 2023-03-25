@@ -9,8 +9,12 @@ const fetchWeatherData = async (city) => {
         loadingState2.style.display = 'flex'
 
         const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${city}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
-        const data = await response.json()
+
+        if (!response.ok) {
+            throw new Error(response.status)
+        }
         
+        const data = await response.json()
         
         loadingState2.style.display = 'none'
         contentView.style.display = 'flex'
@@ -19,9 +23,17 @@ const fetchWeatherData = async (city) => {
         
     } catch (error) {
         
-        loadingState2.style.display = 'flex'
-        loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. please try again'
-        console.log("failed to fetch data")
+        if(error.message === '400') {
+
+            loadingState2.style.display = 'flex'
+            loadingState2.textContent = 'Oops! we couldn\'t fecth weather information because of server error. please refresh the page'
+
+        } else {
+
+            loadingState2.style.display = 'flex'
+            loadingState2.textContent = 'Check that your internet connection on and refresh the page'
+
+        }
         
     }
     
