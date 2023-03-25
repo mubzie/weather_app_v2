@@ -1,5 +1,4 @@
-const fetchWeatherData = async (city) => {
-    
+const fetchWeatherData = async (value) => {
     
     const loadingState2 = document.querySelector('.loading_state')
     const contentView = document.querySelector('.left')
@@ -8,7 +7,7 @@ const fetchWeatherData = async (city) => {
         
         loadingState2.style.display = 'flex'
 
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${city}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
+        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${value}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
 
         if (!response.ok) {
             throw new Error(response.status)
@@ -31,7 +30,7 @@ const fetchWeatherData = async (city) => {
         } else {
 
             loadingState2.style.display = 'flex'
-            loadingState2.textContent = 'Check that your internet connection on and refresh the page'
+            loadingState2.textContent = 'Check that your internet connection is ON and refresh the page'
 
         }
         
@@ -42,7 +41,7 @@ const fetchWeatherData = async (city) => {
 const getWeatherinfo = (data) => {
 
     const location = {
-        region: data.location.region,
+        name: data.location.name,
         country: data.location.country,
         time: data.location.localtime
     }

@@ -25,7 +25,7 @@ const createUI = async (city) => {
     icon.appendChild(weatherIcon)
 
     const region = document.querySelector('.region')
-    region.textContent = `${data.location.region}, ${data.location.country}`
+    region.textContent = `${data.location.name}, ${data.location.country}`
 
     const temp = document.querySelector('.temp')
     temp.textContent = `${Math.round(Math.trunc(data.current.temp))}°C`

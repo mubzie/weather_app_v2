@@ -1,7 +1,7 @@
-import { fetchWeatherData, getWeatherinfo } from "./modules/fetchData"
+/* eslint-disable no-unused-vars */
 import { createUI } from "./modules/DOM"
 
-let searchInput = document.getElementById('search')
+
 const searchBtn = document.getElementById('search_btn')
 
 createUI('lagos')
@@ -40,11 +40,13 @@ const clearDOM = () => {
 
 }
 
-searchBtn.addEventListener('click', (e) => {
+
+const searchLocation = (e) => {
     e.preventDefault()
 
     clearDOM()
 
+    let searchInput = document.getElementById('search')
     const contentView = document.querySelector('.left')
 
     let city = searchInput.value
@@ -54,7 +56,9 @@ searchBtn.addEventListener('click', (e) => {
     createUI(city)
 
     searchInput = document.getElementById('search').value = ''
-    
-})
+
+}
+
+searchBtn.addEventListener('click', searchLocation)
 
 
