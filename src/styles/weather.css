@@ -352,6 +352,7 @@ section {
         max-width: 350px;
         height: 44px;
         padding: 12px;
+        font-size: var(--font-size-xxsmall);
     }
 
     button[type="submit"] {
