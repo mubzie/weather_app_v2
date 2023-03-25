@@ -51,6 +51,11 @@ const searchLocation = (e) => {
 
     let city = searchInput.value
 
+    if(city === '') {
+        createUI('lagos')
+        return
+    }
+
     contentView.style.display = 'none'
     
     createUI(city)
