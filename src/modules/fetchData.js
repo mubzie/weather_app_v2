@@ -19,8 +19,8 @@ const fetchWeatherData = async (city) => {
         
     } catch (error) {
         
-        loadingState2.style.display = 'flex'
-        loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. please try again'
+        // loadingState2.style.display = 'flex'
+        // loadingState2.textContent = 'Oops! we couldn\'t fecth weather information. please try again'
         console.log("failed to fetch data")
         
     }

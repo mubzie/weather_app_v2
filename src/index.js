@@ -7,64 +7,49 @@ const searchBtn = document.getElementById('search_btn')
 createUI('lagos')
 
 const clearDOM = () => {
-    const date = document.querySelector('.date')
-    date.textContent = ''
+    const date = document.querySelector('.date').textContent = ''
 
-    const condition = document.querySelector('.condition')
-    condition.textContent = ''
+    const condition = document.querySelector('.condition').textContent = ''
 
-    const icon = document.getElementById('icon')
-    const weatherIcon = document.createElement('img')
-    weatherIcon.src = ''
-    icon.appendChild(weatherIcon)
+    // const weatherIcon = document.createElement('img').src = ''
 
-    const region = document.querySelector('.region')
-    region.textContent = ''
+    const region = document.querySelector('.region').textContent = ''
 
-    const temp = document.querySelector('.temp')
-    temp.textContent = ''
+    const temp = document.querySelector('.temp').textContent = ''
 
-    const humidity = document.querySelector('.humidity')
-    humidity.textContent = ''
+    const humidity = document.querySelector('.humidity').textContent = ''
 
-    const feelslike = document.querySelector('.feelslike')
-    feelslike.textContent = ''
+    const feelslike = document.querySelector('.feelslike').textContent = ''
 
-    const windSpeed = document.querySelector('.windspeed')
-    windSpeed.textContent = ''
-
-    const heading = document.querySelector('.header_forecast_child')
-    heading.textContent = ''
-
-    const day1 = document.querySelector('.h_one')
-    day1.textContent = ''
-    const icon1 = document.querySelector('.i_one')
-    const weatherIcon1 = document.createElement('img')
-    weatherIcon1.src = ''
-    const con1 = document.querySelector('.c_one')
-    con1.textContent = ''
-    const temp1 = document.querySelector('.t_one')
-    temp1.textContent = ''
+    const windSpeed = document.querySelector('.windspeed').textContent = ''
     
-    const day2 = document.querySelector('.h_two')
-    day2.textContent = ''
-    const icon2 = document.querySelector('.i_two')
-    const weatherIcon2 = document.createElement('img')
-    weatherIcon2.src = ''
-    const con2 = document.querySelector('.c_two')
-    con2.textContent = ''
-    const temp2 = document.querySelector('.t_two')
-    temp2.textContent = ''
+    const heading = document.querySelector('.header_forecast_child').textContent = ''
+
+    const day1 = document.querySelector('.h_one').textContent = ''
+    // const weatherIcon1 = document.createElement('img').src = ''
+    const con1 = document.querySelector('.c_one').textContent = ''
+    const temp1 = document.querySelector('.t_one').textContent = ''
+
     
-    const day3 = document.querySelector('.h_three')
-    day3.textContent = ''
-    const icon3 = document.querySelector('.i_three')
-    const weatherIcon3 = document.createElement('img')
-    weatherIcon3.src = ''
-    const con3 = document.querySelector('.c_three')
-    con3.textContent = ''
-    const temp3 = document.querySelector('.t_three')
-    temp3.textContent = ''
+    const day2 = document.querySelector('.h_two').textContent = ''
+    // const weatherIcon2 = document.createElement('img').src = ''
+    const con2 = document.querySelector('.c_two').textContent = ''
+    const temp2 = document.querySelector('.t_two').textContent = ''
+
+    
+    const day3 = document.querySelector('.h_three').textContent = ''
+    // const weatherIcon3 = document.createElement('img').src = ''
+    const con3 = document.querySelector('.c_three').textContent = ''
+    const temp3 = document.querySelector('.t_three').textContent = ''
+
+    const image = document.querySelector('.img')
+    image.parentNode.removeChild(image)
+
+    const images = document.querySelectorAll('.imgs')
+    images.forEach(img => {
+        img.parentNode.removeChild(img)
+    })
+
 }
 
 searchBtn.addEventListener('click', (e) => {
@@ -74,7 +59,7 @@ searchBtn.addEventListener('click', (e) => {
     
     clearDOM()
 
-  createUI(city)
+    createUI(city)
 
 })
 

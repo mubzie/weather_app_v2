@@ -22,6 +22,7 @@ const createUI = async (city) => {
 
     const icon = document.getElementById('icon')
     const weatherIcon = document.createElement('img')
+    weatherIcon.classList.add('img')
     weatherIcon.src = `${data.current.icon}`
     icon.appendChild(weatherIcon)
 
@@ -47,6 +48,7 @@ const createUI = async (city) => {
     day1.textContent = format(new Date(`${data.forecast.day1_date}`), 'EEEE')
     const icon1 = document.querySelector('.i_one')
     const weatherIcon1 = document.createElement('img')
+    weatherIcon1.classList.add('imgs')
     weatherIcon1.src = `${data.forecast.day1_icon}`
     icon1.appendChild(weatherIcon1)
     const con1 = document.querySelector('.c_one')
@@ -58,6 +60,7 @@ const createUI = async (city) => {
     day2.textContent = format(new Date(`${data.forecast.day2_date}`), 'EEEE')
     const icon2 = document.querySelector('.i_two')
     const weatherIcon2 = document.createElement('img')
+    weatherIcon2.classList.add('imgs')
     weatherIcon2.src = `${data.forecast.day2_icon}`
     icon2.appendChild(weatherIcon2)
     const con2 = document.querySelector('.c_two')
@@ -69,6 +72,7 @@ const createUI = async (city) => {
     day3.textContent = format(new Date(`${data.forecast.day3_date}`), 'EEEE')
     const icon3 = document.querySelector('.i_three')
     const weatherIcon3 = document.createElement('img')
+    weatherIcon3.classList.add('imgs')
     weatherIcon3.src = `${data.forecast.day3_icon}`
     icon3.appendChild(weatherIcon3)
     const con3 = document.querySelector('.c_three')
