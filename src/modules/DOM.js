@@ -8,8 +8,6 @@ const createUI = async (city) => {
     const weatherInfo = await fetchWeatherData(city)
     const data = getWeatherinfo(weatherInfo)
 
-    console.log(data)
-
     // creating the application UI by targeting its respective DOM element //
 
     const date = document.querySelector('.date')
