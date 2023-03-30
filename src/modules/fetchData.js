@@ -7,7 +7,7 @@ const fetchWeatherData = async (value) => {
         
         loadingState2.style.display = 'flex'
 
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${value}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${value}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
 
         if (!response.ok) {
             throw new Error(response.status)
