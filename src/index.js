@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { createUI } from "./modules/DOM"
+import './styles/weather.css'
 
 
 const searchBtn = document.getElementById('search_btn')
