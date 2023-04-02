@@ -7,7 +7,7 @@ const fetchWeatherData = async (value) => {
         
         loadingState2.style.display = 'flex'
 
-        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=6f5bcbd8a54a427889d120216231903&q=${value}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=e4c82e61567a4d7c945221414230204&q=${value}&days=4&aqi=no&alerts=no`, {mode: 'cors'})
 
         if (!response.ok) {
             throw new Error(response.status)
@@ -58,22 +58,22 @@ const getWeatherinfo = (data) => {
     const forecast = {
 
         // forecast data for day 1
-        day1_date: data.forecast.forecastday[1].date,
-        day1_temp: data.forecast.forecastday[1].day.avgtemp_c,
-        day1_text: data.forecast.forecastday[1].day.condition.text,
-        day1_icon: data.forecast.forecastday[1].day.condition.icon,
+        day1_date: data.forecast.forecastday[0].date,
+        day1_temp: data.forecast.forecastday[0].day.avgtemp_c,
+        day1_text: data.forecast.forecastday[0].day.condition.text,
+        day1_icon: data.forecast.forecastday[0].day.condition.icon,
         
         // forecast data for day 2
-        day2_date: data.forecast.forecastday[2].date,
-        day2_temp: data.forecast.forecastday[2].day.avgtemp_c,
-        day2_text: data.forecast.forecastday[2].day.condition.text,
-        day2_icon: data.forecast.forecastday[2].day.condition.icon,
+        day2_date: data.forecast.forecastday[1].date,
+        day2_temp: data.forecast.forecastday[1].day.avgtemp_c,
+        day2_text: data.forecast.forecastday[1].day.condition.text,
+        day2_icon: data.forecast.forecastday[1].day.condition.icon,
         
         // forecast data for day 3
-        day3_date: data.forecast.forecastday[3].date,
-        day3_temp: data.forecast.forecastday[3].day.avgtemp_c,
-        day3_text: data.forecast.forecastday[3].day.condition.text,
-        day3_icon: data.forecast.forecastday[3].day.condition.icon,
+        day3_date: data.forecast.forecastday[2].date,
+        day3_temp: data.forecast.forecastday[2].day.avgtemp_c,
+        day3_text: data.forecast.forecastday[2].day.condition.text,
+        day3_icon: data.forecast.forecastday[2].day.condition.icon,
     }
 
     return { location, current, forecast}
