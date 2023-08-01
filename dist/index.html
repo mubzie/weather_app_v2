@@ -1,107 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/weather.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/weather.css" />
     <script src="main.js" defer></script>
     <title>Weather App</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">Weather App</header>
 
     <main>
-        <div class="search">
+      <div class="search">
+        <form id="search_input">
+          <label for="search"></label>
+          <input type="text" name="" id="search" required />
 
-            <form id="search_input">
-                <label for="search"></label>
-                <input type="text" name="" id="search" required>
+          <button type="submit" id="search_btn">search</button>
+        </form>
+      </div>
 
-                <button type="submit" id="search_btn">search</button>
-            </form>
+      <div class="loading_state">Fetching weather information...</div>
 
+      <section class="left">
+        <div class="weather_info">
+          <div class="date"></div>
+
+          <div class="loc_container">
+            <div class="c-wrapper">
+              <div class="condition"></div>
+              <div id="icon"></div>
+            </div>
+            <div class="region"></div>
+          </div>
+
+          <div class="temp_info">
+            <div class="temp"></div>
+            <div class="extra_info">
+              <div class="info humidity"></div>
+              <div class="info feelslike"></div>
+              <div class="info windspeed"></div>
+            </div>
+          </div>
         </div>
 
-        <div class="loading_state">Fetching weather information...</div>
+        <div class="divider"></div>
 
-        <section class="left">
+        <div class="forecast">
+          <div class="header_forecast">
+            <div class="header_forecast_child"></div>
+          </div>
 
-            <div class="weather_info">
-
-                <div class="date"></div>
-    
-                <div class="loc_container">
-                    <div class="c-wrapper">
-                        <div class="condition"></div>
-                        <div id="icon"></div>
-                    </div>
-                    <div class="region"></div>
+          <div class="f_days">
+            <div class="days">
+              <div class="f-wrapper">
+                <div class="heading h_one"></div>
+                <div class="f_data">
+                  <div class="icon_ i_one"></div>
+                  <div class="cond_ c_one"></div>
+                  <div class="temp_ t_one"></div>
                 </div>
-    
-                <div class="temp_info">
-                    <div class="temp"></div>
-                    <div class="extra_info">
-                        <div class="info humidity"></div>
-                        <div class="info feelslike"></div>
-                        <div class="info windspeed"></div> 
-                    </div>
-                </div>
-
+              </div>
             </div>
 
-            <div class="divider"></div> 
-
-            <div class="forecast">
-    
-                <div class="header_forecast">
-                    <div class="header_forecast_child">
-                        
-                    </div> 
+            <div class="days">
+              <div class="f-wrapper">
+                <div class="heading h_two"></div>
+                <div class="f_data">
+                  <div class="icon_ i_two"></div>
+                  <div class="cond_ c_two"></div>
+                  <div class="temp_ t_two"></div>
                 </div>
-
-                <div class="f_days">
-
-                    <div class="days">
-                        <div class="f-wrapper">
-                            <div class="heading h_one"></div>
-                            <div class="f_data">
-                                <div class="icon_ i_one"></div>
-                                <div class="cond_ c_one"></div>
-                                <div class="temp_ t_one"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="days">
-                        <div class="f-wrapper">
-                            <div class="heading h_two"></div>
-                            <div class="f_data">
-                                <div class="icon_ i_two"></div>
-                                <div class="cond_ c_two"></div>
-                                <div class="temp_ t_two"></div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="days">
-                        <div class="f-wrapper">
-                            <div class="heading h_three"></div>
-                            <div class="f_data">
-                                <div class="icon_ i_three"></div>
-                                <div class="cond_ c_three"></div>
-                                <div class="temp_ t_three"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
+              </div>
             </div>
 
-        </section>
-
+            <div class="days">
+              <div class="f-wrapper">
+                <div class="heading h_three"></div>
+                <div class="f_data">
+                  <div class="icon_ i_three"></div>
+                  <div class="cond_ c_three"></div>
+                  <div class="temp_ t_three"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    
-</body>
+  </body>
 </html>
