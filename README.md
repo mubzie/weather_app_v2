@@ -1,4 +1,4 @@
-# MovieBox
+# Weather App
 https://mubzie.github.io/weather_app_v2/
 
 ## Project Summary
